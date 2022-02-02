@@ -17,4 +17,12 @@ public class IntPiecewiseFunction extends PiecewiseFunction<IntPiecewiseFunction
 
         throw new ArithmeticException("Input was not covered by any Predicate");
     }
+
+    @Override
+    public IntPiecewiseFunction negate() {
+        IntPiecewiseFunction output = new IntPiecewiseFunction();
+        for (Map.Entry<IntPredicate, IntUnaryOperator> entry : pieceMap.entrySet())
+            output.pieceMap.put(entry.getKey().negate(), entry.getValue());
+        return output;
+    }
 }
