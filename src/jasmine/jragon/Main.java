@@ -15,5 +15,16 @@ public class Main {
         IntStream.rangeClosed(-10, 10)
                 .map(stepFunction)
                 .forEach(System.out::println);
+
+        var antiStepFunction = stepFunction.negate();
+
+//        long start = System.nanoTime();
+        System.out.println(antiStepFunction.testRange(-100, 0));
+//        long stop = System.nanoTime();
+//        System.out.printf("Timer: %,d%n", stop - start);
+
+        IntStream.rangeClosed(-10, 10)
+                .map(antiStepFunction)
+                .forEach(System.out::println);
     }
 }

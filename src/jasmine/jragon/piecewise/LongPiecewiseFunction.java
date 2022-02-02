@@ -7,7 +7,8 @@ import java.util.function.LongPredicate;
 import java.util.function.LongUnaryOperator;
 import java.util.stream.LongStream;
 
-public class LongPiecewiseFunction extends PiecewiseFunction<LongPiecewiseFunction, LongPredicate, LongUnaryOperator>
+public final class LongPiecewiseFunction
+        extends PiecewiseFunction<LongPiecewiseFunction, LongPredicate, LongUnaryOperator>
         implements LongUnaryOperator {
     @Override
     public long applyAsLong(long operand) throws ArithmeticException {

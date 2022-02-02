@@ -5,7 +5,8 @@ import java.util.function.IntPredicate;
 import java.util.function.IntUnaryOperator;
 import java.util.stream.IntStream;
 
-public class IntPiecewiseFunction extends PiecewiseFunction<IntPiecewiseFunction, IntPredicate, IntUnaryOperator>
+public final class IntPiecewiseFunction
+        extends PiecewiseFunction<IntPiecewiseFunction, IntPredicate, IntUnaryOperator>
         implements IntUnaryOperator {
     @Override
     public int applyAsInt(int operand) throws ArithmeticException {

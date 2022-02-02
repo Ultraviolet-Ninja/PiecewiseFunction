@@ -5,7 +5,7 @@ import java.util.function.DoubleUnaryOperator;
 import java.util.function.DoublePredicate;
 import java.util.stream.LongStream;
 
-public class DoublePiecewiseFunction 
+public final class DoublePiecewiseFunction
         extends PiecewiseFunction<DoublePiecewiseFunction, DoublePredicate, DoubleUnaryOperator>
         implements DoubleUnaryOperator {
     @Override

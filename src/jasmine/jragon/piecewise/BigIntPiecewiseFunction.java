@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
 import java.util.stream.LongStream;
 
-public class BigIntPiecewiseFunction
+public final class BigIntPiecewiseFunction
         extends PiecewiseFunction<BigIntPiecewiseFunction, Predicate<BigInteger>, UnaryOperator<BigInteger>>
         implements UnaryOperator<BigInteger>, LongFunction<BigInteger>, IntFunction<BigInteger> {
     @Override

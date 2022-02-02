@@ -6,7 +6,9 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
 
-abstract class PiecewiseFunction<F extends PiecewiseFunction<F, P, O>, P, O> {
+abstract sealed class PiecewiseFunction<F extends PiecewiseFunction<F, P, O>, P, O>
+        permits IntPiecewiseFunction, DoublePiecewiseFunction, LongPiecewiseFunction, BigIntPiecewiseFunction {
+
     protected static final String ALL_VALID_VALUES = "All values tested are included in this piecewise function";
 
     protected static final Function<List<? extends Number>, String> OVER_REPRESENTED_NUMBER_STRING = list ->
