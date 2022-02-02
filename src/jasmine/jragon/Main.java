@@ -1,10 +1,12 @@
 package jasmine.jragon;
 
+import jasmine.jragon.piecewise.IntPiecewiseFunction;
+
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        PiecewiseFunction stepFunction = new PiecewiseFunction();
+        IntPiecewiseFunction stepFunction = new IntPiecewiseFunction();
         stepFunction.addFunction(num -> num < 0, num -> 0);
         stepFunction.addFunction(num -> num >= 0, num -> 1);
 
